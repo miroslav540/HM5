@@ -1,12 +1,13 @@
-﻿int M = Convert.ToInt32(Console.ReadLine());
-int howManyPositives = 0;
-for(int i = 0; i< M; i++)
+﻿    Console.WriteLine("Enter yours massive");
+    var a = Console.ReadLine()
+        .Split(new[] {" "},StringSplitOptions.RemoveEmptyEntries)
+        .Select(Int32.Parse);
+    int positives = 0;
+    foreach (var i in a)
 {
-    int digit = Convert.ToInt32(Console.ReadLine());
-    if (digit > 0)
+    if (i > 0)
     {
-        howManyPositives++;
+        positives++;
     }
 }
-
-Console.WriteLine("Positives: {0}", howManyPositives);
+Console.WriteLine("Positives: {0}", positives);
